@@ -82,44 +82,37 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
+/* gruvbox-dark colorscheme */
+
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-  "#000000",
-  "#d54e53",
-  "#98c379",
-  "#e5c07b",
-  "#4c6886",
-  "#c678dd",
-  "#83a598",
-  "#eaeaea",
-
-	/* 8 bright colors */
-  "#666666",
-  "#ec3e45",
-  "#90c966",
-  "#d47f21",
-  "#396886",
-  "#c858e9",
-  "#70c0ba",
-  "#eaeaea",
-
-	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#2c323b",
-	"#ebdbb2",
+	"#1d2021", /* hard contrast: #1d2021 / soft contrast: #32302f */
+	"#ea6962",
+	"#a9b665",
+	"#d8a657",
+	"#7daea3",
+	"#d3869b",
+	"#89b482",
+	"#d4be98",
+	"#1d2021", /* hard contrast: #1d2021 / soft contrast: #32302f */
+	"#ea6962",
+	"#a9b665",
+	"#d8a657",
+	"#7daea3",
+	"#d3869b",
+	"#89b482",
+	"#d4be98",
 };
 
 
 /*
  * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
+ * foreground, background, cursor
  */
-unsigned int defaultfg = 257;
-unsigned int defaultbg = 256;
-static unsigned int defaultcs = 257;
-static unsigned int defaultrcs = 256;
+unsigned int defaultfg = 15;
+unsigned int defaultbg = 0;
+static unsigned int defaultcs = 15;
+static unsigned int defaultrcs = 15;
 
 /*
  * Default shape of cursor
@@ -165,8 +158,8 @@ const unsigned int mousescrollincrement = 5;
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
 	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
-	{ XK_ANY_MOD,           Button4, kscrollup,      {.i = mousescrollincrement} },
-	{ XK_ANY_MOD,           Button5, kscrolldown,    {.i = mousescrollincrement} },
+	{ XK_ANY_MOD,           Button4, kscrollup,      {.i = 5} },
+	{ XK_ANY_MOD,           Button5, kscrolldown,    {.i = 5} },
 };
 
 /* Internal keyboard shortcuts. */
@@ -179,9 +172,9 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ ControlMask,          XK_equal,       zoom,           {.f = +1} },
+	{ ControlMask,          XK_KP_Add,      zoom,           {.f = +1} },
 	{ ControlMask,          XK_minus,       zoom,           {.f = -1} },
-	{ ControlMask,          XK_0,           zoomreset,      {.f =  0} },
+	{ ControlMask,          XK_equal,       zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
