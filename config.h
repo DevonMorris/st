@@ -82,26 +82,26 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
-/* gruvbox-dark colorscheme */
+/* rose-pine colorscheme */
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#1d2021", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#ea6962",
-	"#a9b665",
-	"#d8a657",
+	"#faf4ed",
+	"#b4637a",
+	"#286983",
+	"#ea9d34",
 	"#7daea3",
-	"#d3869b",
-	"#89b482",
-	"#d4be98",
-	"#1d2021", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#ea6962",
-	"#a9b665",
-	"#d8a657",
+	"#907aa9",
+	"#d7827e",
+	"#575279",
+	"#6e6a86",
+	"#b4637a",
+	"#286983",
+	"#ea9d34",
 	"#7daea3",
-	"#d3869b",
-	"#89b482",
-	"#d4be98",
+	"#907aa9",
+	"#d7827e",
+	"#575279"
 };
 
 
