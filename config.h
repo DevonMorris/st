@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "DejaVu Sans Mono:pixelsize=14:antialias=true:autohint=true";
+static char *font = "IBM Plex Mono:pixelsize=14:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -86,22 +86,25 @@ unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#1d2021", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#ea6962",
-	"#a9b665",
-	"#d8a657",
-	"#7daea3",
-	"#d3869b",
-	"#89b482",
-	"#d4be98",
-	"#1d2021", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#ea6962",
-	"#a9b665",
-	"#d8a657",
-	"#7daea3",
-	"#d3869b",
-	"#89b482",
-	"#d4be98",
+    "#38332E",
+    "#B34D4D",
+    "#669966",
+    "#F7C96E",
+    "#94A8D1",
+    "#AD85AD",
+    "#85ADAD",
+    "#C9B39C",
+    "#544D45",
+    "#F7856E",
+    "#94D194",
+    "#F7C96E",
+    "#94A8D1",
+    "#D194BD",
+    "#94D1D1",
+    "#EDE6DE",
+    [255] = 0,
+    "#2A2622",
+    "#EDE6DE",
 };
 
 
@@ -109,8 +112,8 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor
  */
-unsigned int defaultfg = 15;
-unsigned int defaultbg = 0;
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
 static unsigned int defaultcs = 15;
 static unsigned int defaultrcs = 15;
 
